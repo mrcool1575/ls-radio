@@ -77,8 +77,6 @@ AddEventHandler("ls-radio:copConnect", function()
   
   local getPlayerRadioChannel = exports.tokovoip_script:getPlayerData(playerName, "radio:channel")
 
-  print ('Your player name is: ' .. playerName)
-
   exports.tokovoip_script:removePlayerFromRadio(getPlayerRadioChannel)
   exports.tokovoip_script:setPlayerData(playerName, "radio:channel", tonumber(data.channel), true);
   exports.tokovoip_script:addPlayerToRadio(tonumber(data.channel))
